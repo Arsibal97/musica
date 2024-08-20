@@ -1,0 +1,51 @@
+@media screen and (max-width:560px) {
+    .titulo h1{
+        font-size: 6vw !important;
+    }
+    .titulo p{
+        font-size: 2vw !important;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    $generos: clasica metal requeton rock;
+
+    @each $genero in $generos {
+        .genero-#{$genero} {
+            width: 200px;
+            flex-basis: 200px;
+        }
+    }
+
+    .caja-footer.redes {
+        height: 500px;
+        flex-wrap: wrap;
+        gap: 50px;
+        margin-bottom: 20px;
+    }
+
+    .caja-footer.contacto {
+        .imagenes{
+            flex-direction: column;
+            height: 300px;
+        }
+        .textoF3{
+            font-size: 2.8vw !important;
+        }
+        $numImagenes: 2;
+
+    @for $i from 1 through $numImagenes{
+        .imagen#{$i}{
+        background-size: 40%;
+        width: 100%;
+        height: 150px;
+        }
+    }
+    // -- para que el div de la imagen se encuadre bien --
+    }
+    .contenedor-producto{
+    height: 192px !important;
+    }
+}

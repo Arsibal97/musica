@@ -1,0 +1,297 @@
+//Colores
+$color-base: #181823;
+$color-secundario: #537FE7;
+$color-acento: #7B66FF;
+$color-complementario: #C0EEF2;
+$color-neutro: #E9F8F9;
+
+body{
+    box-sizing: border-box;
+    margin: 0px;
+    background-color: $color-base;
+}
+header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: $color-base;
+    z-index: 4;
+    border-bottom: 2px solid $color-acento;
+}
+main{
+    width: 100%;
+}
+nav{
+    text-align: center;
+}
+ul > img{
+    display: none;
+
+}
+header ul{
+    width: 100%;
+    display: inline-block;
+}
+header li{
+    width: 3%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 2vw;
+    display: inline-block;
+    font-weight: bold;
+    color: $color-complementario;
+
+    &:hover{
+        background-color: $color-complementario;
+        color: $color-base;
+    }
+}
+
+
+$generos:clasica metal requeton rock;
+
+@each $genero in $generos {
+    .genero-#{$genero}{
+        background-image: url(../imagenes/#{$genero}.png);
+        height: 200px;
+        flex-basis: 200px;
+        background-size: 150px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+canvas{
+    background-color: $color-base;
+}
+.titulo{
+    color: $color-neutro;
+    position: absolute;
+    bottom: 400px;
+    width: 100%;
+    text-align: center;
+}
+.titulo h1{
+    font-size: 100px;
+}
+.titulo p{
+    font-size: 20px;
+    font-style: italic;
+}
+
+footer{ 
+    width: 100%;
+    position: relative;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0px 40px;
+    background-color: $color-base;
+    border-top: 2px solid $color-acento; 
+
+}
+
+.caja-footer{
+    flex-basis: 28%;
+}
+
+.caja-footer.mapa{
+
+    height: 300px;
+    text-align: left;
+    padding-left: 1%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 13px 0px;
+
+    .textoTituloF1{
+        text-align: left;
+        padding-left: 5%;
+        padding-top: 10px;
+        color: $color-secundario;
+        font-size: 1rem;
+
+    }
+
+    .textoF1{
+        color: $color-neutro;
+
+        margin-top: 8px;
+        margin-bottom: 8px;
+        border-bottom: 2px solid $color-acento;
+    }
+}
+
+.caja-footer.redes{
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    
+}
+
+$redes : linkedin instagram twitter github;
+
+@each $red in $redes{
+
+    .#{$red}{
+        background-image:url(../imagenes/#{$red}.png);
+        background-color: $color-acento;
+        border: 1px solid $color-complementario;
+        border-radius: 20px;
+
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        height: 18%;
+        flex-basis: 18%;
+    }
+    .#{$red}:hover{
+        background-image: url(../imagenes/#{$red}-color.png);
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 3px solid $color-complementario;
+    }
+}
+.caja-footer.contacto{
+    height: 300px;
+    padding-right: 1%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    gap: 10px 0px;
+    .textoTituloF3{
+        color: $color-secundario;
+    }
+    .textoF3{
+        color: $color-neutro;
+        border-bottom: 2px solid $color-acento;
+        font-size: 0.9vw;
+    }
+    .imagenes{
+        display: flex;
+        flex-direction: row;
+        height: 100px;
+        width: 100%;
+    }
+    $numImagenes: 2;
+
+    @for $i from 1 through $numImagenes{
+        .imagen#{$i}{
+        background-image: url(../imagenes/imagenFooter#{$i}.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 80%;
+        width: 100%;
+        }
+    }
+    
+    
+}
+
+// -- selectores de la imagen responsiva -- 
+.contenedor-producto{
+    text-align:center;
+    width: 80%;
+    height: 500px;
+    overflow-y: hidden;
+    border-radius: 20px;
+    border: 2px solid rgb(40, 28, 126);
+}
+
+.contenedor-producto img{
+    max-width: 100%;
+    margin: 0 auto;
+    object-fit: cover; 
+}
+
+
+ //-- tabla responsiva --
+
+// -- tabla de escritorio --x§x§§
+.tabla{
+    width: 80%;
+    height: 200px;
+    border-collapse: collapse;
+    color: #C0EEF2;
+    margin: 0 auto;
+    margin-bottom: 75px;
+    
+}
+.titulo-tabla th{
+    border: 1px solid rgb(77, 60, 204);
+    background-color: #3a1d61;
+}
+td{
+    border: 1px solid rgb(40, 28, 126);
+    padding: 5px; 
+} 
+
+
+ //--tabla de scritorio a tablet --
+ .tabla-tablet{
+    display: none;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 75px;
+ }
+ .columna{
+    display: flex;
+ }
+ .fila{
+    border-bottom: 3px solid rgb(160, 108, 212);
+ }
+ .th, .td{
+    
+    padding: 5px;
+    border:1px solid #537FE7;
+    color: #C0EEF2;
+ }
+ .th{
+    width: 40%;
+    background-color: #3a1d61;
+ }
+ .td{
+    width: 60%;
+ }
+
+ // --- Selectores del Video responsivo---//
+.caja-video{
+    text-align: center;
+    width: 90%;
+    height: 500px;
+    margin: 0 auto;
+    margin-bottom: 75px;   
+}
+video{
+    height: 100%;
+    max-width: 100%;
+    border-radius: 20px;
+    object-fit: contain;
+    border: 1px solid rgb(85, 72, 202);
+}
+.caja-imagen-art{
+    width: 60%;
+    height: 200px;
+    margin: auto
+}
+
+
+
+@import "_movil";
+@import "_tablet";
+@import "glow";
+
+// sass --watch workspace/DIW-MHP/Música/sass/main.scss workspace/DIW-MHP/Música/css/estilos.css

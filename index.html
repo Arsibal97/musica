@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GroovFlow</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://cdn.skypack.dev/dat.gui"></script>
+    <script src="js/canvas.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/glow.js" defer type="module" ></script>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <img src="imagenes/icono.svg" alt="icono" loading="lazy">
+                <li>Playlist</li>
+                <li>Podcast</li>
+                <li>Descubrir</li>
+            </ul>
+        </nav>
+    </header>
+    <canvas id="canvas"></canvas>
+    <div  class="titulo">
+      <h1>Música</h1>
+      <p>La web donde descubir tu nueva canción favorita</p>
+    </div>
+    <main>
+        <div class="container">
+            <article>
+              <div class="glows"></div>
+              <div class="genero-clasica"></div>
+            </article>
+            <article>
+              <div class="glows"></div>
+              <div class="genero-metal" loading=""></div>
+            </article>
+            <article>
+              <div class="glows"></div>
+              <div class="genero-requeton"></div>
+            </article>
+            <article>
+              <div class="glows"></div>
+              <div class="genero-rock"></div>
+            </article>
+         
+            <div class="contenedor-producto">
+              <img class="imagg"src="imagenes/igenerica.png" alt="imagenMusical" loading="lazy"> 
+            </div>
+          </div>    
+        <br/>
+        <table class="tabla">
+          <tr class="titulo-tabla">
+            <th>Artista</th>
+            <th>Album</th>
+            <th>Cancion</th>
+            <th>Año</th>
+            <th>Genero</th>
+            <th>Ventas</th>
+
+          </tr>
+          <tr>
+            <td class="A1">Johann Sebastian Bach</td>
+            <td>nulo</td>
+            <td>Air on the G string</td>
+            <td>1720</td>
+            <td>clasica</td>
+            <td>infinito</td>
+          </tr>
+          <tr>
+            <td class="A2">Angel y khriz</td>
+            <td>reggaeton mix</td>
+            <td>Ven Bailalo</td>
+            <td>2005 </td>
+            <td>reggaeton</td>
+            <td>1.000.000 </td>
+          </tr>
+          <tr>
+            <td class="A3">linkin park</td>
+            <td>Hydrid Theory</td>
+            <td>In the End</td>
+            <td>2000</td>
+            <td>rock</td>
+            <td>25.000.000</td>
+          </tr>
+          <tr>
+            <td class="A4">Evanescence</td>
+            <td>Fallen</td>
+            <td>Bring me to life</td>
+            <td>2003</td>
+            <td>metal</td>
+            <td>25.000.000</td>
+          </tr>
+        </table>
+
+      <div class="tabla-tablet">
+        <div class="fila">
+          <div class="columna">
+            <div class="th">Artista</div>
+            <div class="td A1">Johann Sebastian Bach</div>
+          </div>
+          <div class="columna">
+            <div class="th">Album</div>
+            <div class="td">nulo</div>
+          </div>
+          <div class="columna">
+            <div class="th">Cancion</div>
+            <div class="td">air on the G String</div>
+          </div>
+          <div class="columna">
+            <div class="th">Año</div>
+            <div class="td">1720</div>
+          </div>
+          <div class="columna">
+            <div class="th">Genero</div>
+            <div class="td">clasica</div>
+          </div>
+          <div class="columna">
+            <div class="th">Ventas</div>
+            <div class="td">infinito</div>
+          </div>
+        </div>
+        <div class="fila">
+          <div class="columna">
+            <div class="th">Artista</div>
+            <div class="td A2">Angel y khriz</div>
+          </div>
+          <div class="columna">
+            <div class="th">Album</div>
+            <div class="td">reggaeton mix</div>
+          </div>
+          <div class="columna">
+            <div class="th">Cancion</div>
+            <div class="td">Ven Bailalo</div>
+          </div>
+          <div class="columna">
+            <div class="th">Año</div>
+            <div class="td">2005</div>
+          </div>
+          <div class="columna">
+            <div class="th">Genero</div>
+            <div class="td">reggaeton</div>
+          </div>
+          <div class="columna">
+            <div class="th">Ventas</div>
+            <div class="td">1.000.000</div>
+          </div>
+        </div>
+        <div class="fila">
+          <div class="columna">
+            <div class="th">Artista</div>
+            <div class="td A3">Linkin Park</div>
+          </div>
+          <div class="columna">
+            <div class="th">Album</div>
+            <div class="td">Hydrid Theory</div>
+          </div>
+          <div class="columna">
+            <div class="th">Cancion</div>
+            <div class="td">In the End</div>
+          </div>
+          <div class="columna">
+            <div class="th">Año</div>
+            <div class="td">2000</div>
+          </div>
+          <div class="columna">
+            <div class="th">Genero</div>
+            <div class="td">rock</div>
+          </div>
+          <div class="columna">
+            <div class="th">Ventas</div>
+            <div class="td">25.000.000</div>
+          </div>
+        </div>
+        <div class="fila">
+          <div class="columna">
+            <div class="th">Artista</div>
+            <div  class="td A3">Evanescence</div>
+          </div>
+          <div class="columna">
+            <div class="th">Album</div>
+            <div class="td">Fallen</div>
+          </div>
+          <div class="columna">
+            <div class="th">Cancion</div>
+            <div class="td">Bring me to life</div>
+          </div>
+          <div class="columna">
+            <div class="th">Año</div>
+            <div class="td">2003</div>
+          </div>
+          <div class="columna">
+            <div class="th">Genero</div>
+            <div class="td">metal</div>
+          </div>
+          <div class="columna">
+            <div class="th">Ventas</div>
+            <div class="td">25.000.000</div>
+          </div>
+        </div>
+      </div>
+      <div class="caja-video">
+        <video class='Vid' src="video/Vclasica.mp4" controls></video>
+      </div>
+       <!-- diseño responsivo con art-director
+      <div class="caja-imagen-art">
+        <picture>
+          <source media="(min-width:560px)" srcset="/imagenes/twittergrande.png">
+          <source media="(max-width:560px)" srcset="/imagenes/twitter.png">
+          <img src="imagenes/twittergrande.png" alt="imagenTw">
+        </picture>
+      </div>-->
+     </main>
+    <footer>
+        <div class="caja-footer mapa">
+          <div class="textoTituloF1">Informacion</div>
+          <span class="textoF1">Direccion: Calle Felicilandia 18+1 28001</span>
+          <span class="textoF1">Telefono: +34 666 666 666</span>
+          <span class="textoF1">Email: ame@ame.es </span>
+        </div>
+        <div class="caja-footer redes">
+            <div class="linkedin"></div>
+            <div class="instagram"></div>
+            <div class="twitter"></div>
+            <div class="github"></div>
+        </div>
+        <div class="caja-footer contacto">
+          <div class="textoTituloF3">Music</div>
+          <span class="textoF3">¿No tienes la aplicación todavía?</span><br>
+          <span class="textoF3">Descargarla para tener la aplicación en todas partes. </span>
+          <div class="imagenes">
+            <span class="imagen1"></span>
+            <span class="imagen2"></span>
+          </div>
+        </div>
+    </footer>
+</body>
+</html>
